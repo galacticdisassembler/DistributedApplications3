@@ -29,4 +29,12 @@ jobs:
             docker build . --file Dockerfile --tag ${{ secrets.REGISTRY_NAME}}/node-web-app:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_NAME}}/node-web-app:${{ github.sha }}
 
-    
+        - name: HashiCorp - Setup Terraform
+          uses: hashicorp/setup-terraform@v1.2.1
+
+        - run: terraform init
+
+        - run: terraform plan
+
+        - run: terraform apply -auto-approve
+
