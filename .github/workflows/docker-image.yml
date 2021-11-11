@@ -41,14 +41,15 @@ jobs:
       # Your CSIO will come after you.
       # - run: terraform apply -auto-approve
 
-      - name: "Deploy to Azure Container Instances"
-        uses: "azure/aci-deploy@v1"
-        with:
-          resource-group: ${{ secrets.RESOURCE_GROUP }}
-          dns-name-label: ${{ secrets.RESOURCE_GROUP }}${{ github.sha }}
-          image: ${{ secrets.REGISTRY_NAME}}/node-web-app:latest
-          registry-login-server: ${{ secrets.REGISTRY_NAME }}.azurecr.io
-          registry-username: ${{ secrets.REGISTRY_USERNAME }}
-          registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-          name: cool-node-app
-          location: "west us"
+      # Deploy costs money. Money is something we don't have. Fuck deploy, fuck money, fuck UTM.
+      # - name: "Deploy to Azure Container Instances"
+      #   uses: "azure/aci-deploy@v1"
+      #   with:
+      #     resource-group: ${{ secrets.RESOURCE_GROUP }}
+      #     dns-name-label: ${{ secrets.RESOURCE_GROUP }}${{ github.sha }}
+      #     image: ${{ secrets.REGISTRY_NAME}}/node-web-app:latest
+      #     registry-login-server: ${{ secrets.REGISTRY_NAME }}.azurecr.io
+      #     registry-username: ${{ secrets.REGISTRY_USERNAME }}
+      #     registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+      #     name: cool-node-app
+      #     location: "west us"
