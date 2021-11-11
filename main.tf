@@ -9,6 +9,10 @@ terraform {
 
 provider "azurerm" {
   features {}
+  subscription_id = "73dd73d0-1bcb-462b-b391-f750557ac592"
+  client_id       = "fac60b10-e772-46ec-a92b-f3cb16329605"
+  client_secret   = "ooEYCsViq0ZHysWhq-ZQnd5iCOYM6ZybP4"
+  tenant_id       = "1b6d1f48-8893-4889-bdbf-1fb841bcae46"
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -59,8 +63,7 @@ resource "azurerm_app_service" "app-service" {
     app_command_line          = ""
     use_32_bit_worker_process = true
     always_on                 = false
-    # linux_fx_version = "DOCKER|${azurerm_container_registry.acr.name}/node-web-app:latest"
-    linux_fx_version = "DOCKER|${azurerm_container_registry.acr.login_server}/node-web-app:latest"
+    linux_fx_version          = "DOCKER|${azurerm_container_registry.acr.login_server}/node-web-app:latest"
   }
 
 }
