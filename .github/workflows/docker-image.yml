@@ -32,6 +32,12 @@ jobs:
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v1.2.1
 
+      - run: |
+          export TF_VAR_subscription_id=${{ secrets.AZURE_SUB_ID }}
+          export TF_VAR_client_id=${{ secrets.AZURE_CLIENT_ID }}
+          export TF_VAR_client_secret=${{ secrets.AZURE_CLIENT_SECRET }}
+          export TF_VAR_tenant_id=${{ secrets.AZURE_TENANT_ID }}
+
       - run: terraform init
 
       - run: terraform plan

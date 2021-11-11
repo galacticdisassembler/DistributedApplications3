@@ -9,6 +9,10 @@ terraform {
 
 provider "azurerm" {
   features {}
+  subscription_id = string
+  client_id       = string
+  client_secret   = string
+  tenant_id       = string
 }
 
 resource "azurerm_resource_group" "rg" {
