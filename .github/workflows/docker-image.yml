@@ -26,6 +26,8 @@ jobs:
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: | 
-            docker build . --file Dockerfile --tag ${{ secrets.REGISTRY_LOGIN_SERVER }}/node-web-app:${{ github.sha }}
-            docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/node-web-app:$(date +%s)/:${{ github.sha }}
+            docker build . --file Dockerfile --tag $ACRLOGINSERVER/node-web-app:${{ github.sha }}
+            docker push $ACRLOGINSERVER/node-web-app:${{ github.sha }}
+          env:
+            ACRLOGINSERVER: ${{ secrets.REGISTRY_LOGIN_SERVER }}
     
