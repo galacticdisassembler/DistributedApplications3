@@ -1,0 +1,32 @@
+
+
+POST http://0.0.0.0:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "a2@mail.ru",
+  "password": "123456"
+}
+
+
+POST http://0.0.0.0:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "a2@mail.ru",
+  "password": "123456"
+}
+
+
+POST http://0.0.0.0:8080/api/posts/addPost
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWEyODNkZDk1MGRmMzZkODU4NzcyYjAiLCJpYXQiOjE2MzgwODM2MjQsImV4cCI6MTYzODEwMTYyNH0.GF6GacnSvtIS713dXF8VBep9mmsFm4EJReMlMRfCbw
+
+{
+  "title": "Title example",
+  "content": "Hellororld eqr qer eqr eqr 13r3 1r31 r3"
+}
+
+
+
+GET http://localhost:8080/

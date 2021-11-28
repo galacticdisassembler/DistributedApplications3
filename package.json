@@ -4,12 +4,16 @@
   "description": "lab3 for pad",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.1"
+    "express": "^4.16.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
-
