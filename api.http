@@ -20,12 +20,16 @@ Content-Type: application/json
 
 POST http://0.0.0.0:8080/api/posts/addPost
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWEyODNkZDk1MGRmMzZkODU4NzcyYjAiLCJpYXQiOjE2MzgwODM2MjQsImV4cCI6MTYzODEwMTYyNH0.GF6GacnSvtIS713dXF8VBep9mmsFm4EJReMlMRfCbw
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWEzM2U1NTg0ZTI4MmViYjNmOTI3M2UiLCJpYXQiOjE2MzgxMjQwMjksImV4cCI6MTYzODE0MjAyOX0.m0sfxsejzzq9vSH2Mg-e0EpHki2u5ck9fW8DpGthNaY
 
 {
-  "title": "Title example",
+  "title": "4Title example",
   "content": "Hellororld eqr qer eqr eqr 13r3 1r31 r3"
 }
+
+GET http://0.0.0.0:8080/api/posts/posts?offset=1&length=2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWEzM2U1NTg0ZTI4MmViYjNmOTI3M2UiLCJpYXQiOjE2MzgxMjQwMjksImV4cCI6MTYzODE0MjAyOX0.m0sfxsejzzq9vSH2Mg-e0EpHki2u5ck9fW8DpGthNaY
 
 
 
